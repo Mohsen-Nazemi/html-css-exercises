@@ -1,0 +1,114 @@
+/* mobile first */
+
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* NAVBAR STYLING STARTS */
+
+nav {
+    box-shadow: rgba(84, 166, 247, 0.2) 0px 8px 24px;
+}
+
+#logo {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav ul {
+    position: absolute;
+    width: 100%;
+    left: -100%;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.5s;
+}
+
+nav ul li {
+    text-align: center;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: #777;
+    display: block;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+a:hover,
+a.active {
+    background: powderblue;
+    color: #000000;
+    transition: .5s;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+#checkbox-toggle {
+    display: none;
+}
+
+.hamburger {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#checkbox-toggle:checked~ul {
+    left: 0;
+    border-bottom: 1px solid rgb(107, 107, 107);
+}
+
+
+section {
+    margin: 1rem;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+
+/* tablet */
+@media screen and (min-width: 768px) {}
+
+
+
+/* desktop */
+@media screen and (min-width: 992px) {
+
+    #logo {
+        float: left;
+    }
+
+    nav ul {
+        position: static;
+    }
+
+    nav ul li {
+        float: right;
+    }
+
+    #checkbox-toggle,
+    .hamburger {
+        display: none;
+    }
+
+}
